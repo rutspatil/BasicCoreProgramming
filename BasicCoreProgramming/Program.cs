@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace BasicCoreProgramming
 {
-    class EvenOrOdd
+    class VowelsOrConsonant
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the number : ");
-            //Convert user input into integer
-            int num = Convert.ToInt32(Console.ReadLine());
+            //taking input from user
+            Console.WriteLine("Enter an Alphabet :");
+            char ch = Convert.ToChar(Console.ReadLine()); //converted to chararcter
 
-            if (num % 2 == 0)
+            //if else condition for checking of vowels or consonants
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
             {
-                Console.WriteLine("Number is Even");
+                Console.WriteLine("{0} is a Vowel", ch);
             }
             else
             {
-                Console.WriteLine("Number is Odd");
+                Console.WriteLine("{0} is a Consonant", ch);
             }
         }
     }
