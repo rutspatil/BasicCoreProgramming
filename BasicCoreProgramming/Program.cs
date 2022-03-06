@@ -6,23 +6,33 @@ using System.Threading.Tasks;
 
 namespace BasicCoreProgramming
 {
-    class VowelsOrConsonant
+    class LargestNumber
     {
         static void Main(string[] args)
         {
-            //taking input from user
-            Console.WriteLine("Enter an Alphabet :");
-            char ch = Convert.ToChar(Console.ReadLine()); //converted to chararcter
+            Console.WriteLine("Enter Three Numbers : ");
+            Console.Write("\nEnter Number 1 : ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
 
-            //if else condition for checking of vowels or consonants
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+            Console.Write("\nEnter Number 2 : ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("\nEnter Number 3 : ");
+            int num3 = Convert.ToInt32(Console.ReadLine());
+
+            if (num1 > num2 && num1 > num3)
             {
-                Console.WriteLine("{0} is a Vowel", ch);
+                Console.WriteLine("\nLargest number is : " + num1);
+            }
+            else if (num2 > num1 && num2 > num3)
+            {
+                Console.WriteLine("\nLargest number is : " + num2);
             }
             else
             {
-                Console.WriteLine("{0} is a Consonant", ch);
+                Console.WriteLine("\nLargest number is : " + num3);
             }
+
         }
     }
 }
