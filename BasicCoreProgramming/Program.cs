@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace BasicCoreProgramming
 {
-    class PowerOf2
+    class HarmonicNumber
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Enter the number : ");
+            double sum = 0;
+
+            Console.Write("Enter number of terms : ");
             int num = Convert.ToInt32(Console.ReadLine());
 
-            int i = 0;
-            int powerOfTwo = 1;
-            while (i <= num)
+            Console.Write("\nHarmonic series is    ");
+            for (int i = 1; i <= num; i++)
             {
-                Console.WriteLine(i + " " + powerOfTwo);
-                powerOfTwo = 2 * powerOfTwo;
-                i = i + 1;
+                Console.Write("1/{0} + ", i);
+                sum += 1 / (float)i;
             }
-
+            Console.WriteLine("\n\nsum of harmonic series upto {0} terms : {1}", num, sum);
         }
     }
 }
