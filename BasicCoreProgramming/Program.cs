@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace BasicCoreProgramming
 {
-    class HarmonicNumber
+    class PrimeFactor
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            double sum = 0;
-
-            Console.Write("Enter number of terms : ");
+            Console.Write("Enter your integer number :");
             int num = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("\nHarmonic series is    ");
-            for (int i = 1; i <= num; i++)
+            for (int i = 1; i * i <= num; i++)
             {
-                Console.Write("1/{0} + ", i);
-                sum += 1 / (float)i;
+                if (num % i == 0)
+                {
+                    Console.WriteLine(i + " is a prime factor of " + num);
+                }
             }
-            Console.WriteLine("\n\nsum of harmonic series upto {0} terms : {1}", num, sum);
         }
     }
 }
